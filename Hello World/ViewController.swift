@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var nameResultLabel: UILabel!
+    
+    @IBOutlet weak var nameInput: UITextField!
+    
+    @IBAction func nameButton(_ sender: AnyObject) {
+        nameResultLabel.text = "Your name  is " + nameInput.text!
+        print("Your name is ")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,3 +32,9 @@ class ViewController: UIViewController {
 
 }
 
+
+class Dog {
+    func bark() {
+        print("Woof Woof!")
+    }
+}
